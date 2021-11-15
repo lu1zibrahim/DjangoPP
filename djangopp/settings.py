@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'collectfast',
     'django.contrib.staticfiles',
     'base',
 
@@ -132,9 +133,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
+COLLECTFAST_ENABLED = False
+
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
-#STORAGE CONFIGURATION IN S3 AWS
+# STORAGE CONFIGURATION IN S3 AWS
 
 if AWS_ACCESS_KEY_ID:
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
@@ -143,6 +146,9 @@ if AWS_ACCESS_KEY_ID:
     AWS_PRELOAD_METADATA = True
     AWS_AUTO_CREATE_BUCKET = False  # Para não criar buckets automaticamentes
     AWS_QUERYSTRING_AUTH = True  # Gerar URL assinadas
+
+    COLLECTFAST_ENABLED = True
+
     AWS_S3_CUSTOM_DOMAIN = None  # Irá usar o dominio do s3
     AWS_DEFAULT_ACL = 'private'  # Não ficar público
 
