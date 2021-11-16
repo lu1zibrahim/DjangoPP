@@ -80,6 +80,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangopp.wsgi.application'
 
+# Configuração Django-debug-toolbar
+
+INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
+
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -140,7 +147,7 @@ COLLECTFAST_ENABLED = False
 STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
 
-AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=False)
 
 # STORAGE CONFIGURATION IN S3 AWS
 
