@@ -1,6 +1,6 @@
 import pytest
 
-from modulos import facade
+from modulos import facade  # noqa
 from model_bakery import baker
 
 from modulos.models import Modulo
