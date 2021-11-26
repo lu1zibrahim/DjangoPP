@@ -69,9 +69,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
+
     'base',
     'aperitivos',
     'modulos',
+    'turmas',
+
     'ordered_model',
     'django_extensions',
 
