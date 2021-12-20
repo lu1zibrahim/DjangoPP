@@ -358,11 +358,10 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:157d21de9d055ab9e8ea3186d91e7f4f865e11f42deafa952d90842671fc2576",
-                "sha256:4adde3d1e1c89bde1c643c64d89cdd94cbfd8c75252ee459d4500bccb9c7d05d"
+                "sha256:18a86ddb51bf17f2b92f422ff57ea04b88b7b4580b9b144ce7422c9e24a6c143",
+                "sha256:6241bb49f6ebab8952550545e99357378ed64847a2d7c851cc59b5d79e25ad32"
             ],
-            "markers": "python_version >= '3.6'",
-            "version": "==59.2.0"
+            "version": "==60.0.1"
         },
         "six": {
             "hashes": [
