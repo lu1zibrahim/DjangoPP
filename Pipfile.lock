@@ -166,11 +166,10 @@
         },
         "ipython": {
             "hashes": [
-                "sha256:4f69d7423a5a1972f6347ff233e38bbf4df6a150ef20fbb00c635442ac3060aa",
-                "sha256:a658beaf856ce46bc453366d5dc6b2ddc6c481efd3540cb28aa3943819caac9f"
+                "sha256:7ca74052a38fa25fe9bedf52da0be7d3fdd2fb027c3b778ea78dfe8c212937d1",
+                "sha256:f2db3a10254241d9b447232cec8b424847f338d9d36f9a577a6192c332a46abd"
             ],
-            "index": "pypi",
-            "version": "==7.29.0"
+            "version": "==8.4.0"
         },
         "jedi": {
             "hashes": [
